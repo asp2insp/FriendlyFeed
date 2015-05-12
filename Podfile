@@ -1,2 +1,2 @@
-pod 'Facebook-iOS-SDK'
-
+pod "FBSDKCoreKit"
+pod "FBSDKLoginKit"

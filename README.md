@@ -4,7 +4,7 @@ CodePath iOS Bootcamp lab 2 - Facebook Feed
 This is a lab assignment for the CodePath iOS bootcamp
 
 ## Milestones:
- [ ] Setup
+ [x] Setup
  [ ] User Home Feed
  [ ] Feed Settings View
 
