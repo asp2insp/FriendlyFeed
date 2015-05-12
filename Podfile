@@ -1,0 +1,2 @@
+pod 'Facebook-iOS-SDK'
+
