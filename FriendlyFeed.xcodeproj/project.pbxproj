@@ -14,6 +14,13 @@
 		FEEE5C961B01933F009C1280 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEEE5C951B01933F009C1280 /* Images.xcassets */; };
 		FEEE5C991B01933F009C1280 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEEE5C971B01933F009C1280 /* LaunchScreen.xib */; };
 		FEEE5CA51B01933F009C1280 /* FriendlyFeedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEE5CA41B01933F009C1280 /* FriendlyFeedTests.swift */; };
+		FEEE5CB61B019BDB009C1280 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEE5CB51B019BDB009C1280 /* FeedViewController.swift */; };
+		FEEE5CBC1B019C59009C1280 /* Evaluator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEE5CB71B019C59009C1280 /* Evaluator.swift */; };
+		FEEE5CBD1B019C59009C1280 /* Getter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEE5CB81B019C59009C1280 /* Getter.swift */; };
+		FEEE5CBE1B019C59009C1280 /* Immutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEE5CB91B019C59009C1280 /* Immutable.swift */; };
+		FEEE5CBF1B019C59009C1280 /* Reactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEE5CBA1B019C59009C1280 /* Reactor.swift */; };
+		FEEE5CC01B019C59009C1280 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEE5CBB1B019C59009C1280 /* Store.swift */; };
+		FEEE5CC31B019CDE009C1280 /* Stores.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEE5CC21B019CDE009C1280 /* Stores.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +48,13 @@
 		FEEE5CA31B01933F009C1280 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FEEE5CA41B01933F009C1280 /* FriendlyFeedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendlyFeedTests.swift; sourceTree = "<group>"; };
 		FEEE5CAE1B0194CE009C1280 /* FriendlyFeed-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FriendlyFeed-Bridging-Header.h"; sourceTree = "<group>"; };
+		FEEE5CB51B019BDB009C1280 /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		FEEE5CB71B019C59009C1280 /* Evaluator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Evaluator.swift; sourceTree = "<group>"; };
+		FEEE5CB81B019C59009C1280 /* Getter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Getter.swift; sourceTree = "<group>"; };
+		FEEE5CB91B019C59009C1280 /* Immutable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Immutable.swift; sourceTree = "<group>"; };
+		FEEE5CBA1B019C59009C1280 /* Reactor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reactor.swift; sourceTree = "<group>"; };
+		FEEE5CBB1B019C59009C1280 /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		FEEE5CC21B019CDE009C1280 /* Stores.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stores.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +116,7 @@
 		FEEE5C8B1B01933F009C1280 /* FriendlyFeed */ = {
 			isa = PBXGroup;
 			children = (
+				FEEE5CC11B019C64009C1280 /* Nuclear */,
 				FEEE5C8E1B01933F009C1280 /* AppDelegate.swift */,
 				FEEE5C901B01933F009C1280 /* ViewController.swift */,
 				FEEE5C921B01933F009C1280 /* Main.storyboard */,
@@ -109,6 +124,8 @@
 				FEEE5C971B01933F009C1280 /* LaunchScreen.xib */,
 				FEEE5C8C1B01933F009C1280 /* Supporting Files */,
 				FEEE5CAE1B0194CE009C1280 /* FriendlyFeed-Bridging-Header.h */,
+				FEEE5CB51B019BDB009C1280 /* FeedViewController.swift */,
+				FEEE5CC21B019CDE009C1280 /* Stores.swift */,
 			);
 			path = FriendlyFeed;
 			sourceTree = "<group>";
@@ -136,6 +153,18 @@
 				FEEE5CA31B01933F009C1280 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FEEE5CC11B019C64009C1280 /* Nuclear */ = {
+			isa = PBXGroup;
+			children = (
+				FEEE5CB71B019C59009C1280 /* Evaluator.swift */,
+				FEEE5CB81B019C59009C1280 /* Getter.swift */,
+				FEEE5CB91B019C59009C1280 /* Immutable.swift */,
+				FEEE5CBA1B019C59009C1280 /* Reactor.swift */,
+				FEEE5CBB1B019C59009C1280 /* Store.swift */,
+			);
+			name = Nuclear;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,7 +303,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				FEEE5C911B01933F009C1280 /* ViewController.swift in Sources */,
+				FEEE5CBC1B019C59009C1280 /* Evaluator.swift in Sources */,
+				FEEE5CBF1B019C59009C1280 /* Reactor.swift in Sources */,
+				FEEE5CC01B019C59009C1280 /* Store.swift in Sources */,
+				FEEE5CB61B019BDB009C1280 /* FeedViewController.swift in Sources */,
+				FEEE5CC31B019CDE009C1280 /* Stores.swift in Sources */,
 				FEEE5C8F1B01933F009C1280 /* AppDelegate.swift in Sources */,
+				FEEE5CBE1B019C59009C1280 /* Immutable.swift in Sources */,
+				FEEE5CBD1B019C59009C1280 /* Getter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
