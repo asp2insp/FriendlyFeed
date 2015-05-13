@@ -25,6 +25,8 @@
 		FEEE5CCF1B02E308009C1280 /* PhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEEE5CCD1B02E308009C1280 /* PhotoCell.xib */; };
 		FEEE5CD21B02E443009C1280 /* StatusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEE5CD01B02E443009C1280 /* StatusCell.swift */; };
 		FEEE5CD31B02E443009C1280 /* StatusCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEEE5CD11B02E443009C1280 /* StatusCell.xib */; };
+		FEEE5CD51B02E903009C1280 /* gear_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FEEE5CD41B02E903009C1280 /* gear_icon.png */; };
+		FEEE5CD71B03B244009C1280 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEE5CD61B03B244009C1280 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		FEEE5CCD1B02E308009C1280 /* PhotoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoCell.xib; sourceTree = "<group>"; };
 		FEEE5CD01B02E443009C1280 /* StatusCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusCell.swift; sourceTree = "<group>"; };
 		FEEE5CD11B02E443009C1280 /* StatusCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StatusCell.xib; sourceTree = "<group>"; };
+		FEEE5CD41B02E903009C1280 /* gear_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gear_icon.png; sourceTree = "<group>"; };
+		FEEE5CD61B03B244009C1280 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +142,7 @@
 				FEEE5CCD1B02E308009C1280 /* PhotoCell.xib */,
 				FEEE5CD01B02E443009C1280 /* StatusCell.swift */,
 				FEEE5CD11B02E443009C1280 /* StatusCell.xib */,
+				FEEE5CD61B03B244009C1280 /* SettingsViewController.swift */,
 			);
 			path = FriendlyFeed;
 			sourceTree = "<group>";
@@ -145,6 +150,7 @@
 		FEEE5C8C1B01933F009C1280 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FEEE5CD41B02E903009C1280 /* gear_icon.png */,
 				FEEE5C8D1B01933F009C1280 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -262,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FEEE5CCF1B02E308009C1280 /* PhotoCell.xib in Resources */,
+				FEEE5CD51B02E903009C1280 /* gear_icon.png in Resources */,
 				FEEE5CD31B02E443009C1280 /* StatusCell.xib in Resources */,
 				FEEE5C941B01933F009C1280 /* Main.storyboard in Resources */,
 				FEEE5C991B01933F009C1280 /* LaunchScreen.xib in Resources */,
@@ -327,6 +334,7 @@
 				FEEE5C8F1B01933F009C1280 /* AppDelegate.swift in Sources */,
 				FEEE5CBE1B019C59009C1280 /* Immutable.swift in Sources */,
 				FEEE5CBD1B019C59009C1280 /* Getter.swift in Sources */,
+				FEEE5CD71B03B244009C1280 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

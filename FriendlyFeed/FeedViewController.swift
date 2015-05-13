@@ -20,6 +20,13 @@ class FeedViewController : UIViewController, ReactorResponder, UICollectionViewD
         collectionView.registerNib(UINib(nibName: "PhotoCell", bundle: nil), forCellWithReuseIdentifier: "friendlyfeed.photo")
         
         reactor.responder = self
+        
+        // Set up right button
+        let image = UIImage(named: "gear_icon.png")
+        let rightButton = UIBarButtonItem(image: image, style: UIBarButtonItemStyle.Plain, target: self, action: "goToSettings:")
+        self.navigationItem.rightBarButtonItem = rightButton
+        
+        self.navigationItem.title = "Title"
         self.refreshDataFromServer()
     }
     
@@ -54,9 +61,9 @@ class FeedViewController : UIViewController, ReactorResponder, UICollectionViewD
                 .getIn([indexPath.row])
                 .getIn(["message"])
                 .toSwift() as? String {
-            return CGSize(width: 260, height: 100)
+            return CGSize(width: self.collectionView.frame.size.width - 20, height: 100)
         } else {
-            return CGSize(width: 150, height: 200)
+            return CGSize(width: self.collectionView.frame.size.width - 20, height: 400)
         }
     }
     
@@ -80,6 +87,10 @@ class FeedViewController : UIViewController, ReactorResponder, UICollectionViewD
             cell.message.text = "Unknown"
             return cell
         }
+    }
+    
+    func goToSettings(sender: AnyObject) {
+        self.performSegueWithIdentifier("settings", sender: self)
     }
     
     func onUpdate() {

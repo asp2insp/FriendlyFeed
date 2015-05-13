@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let reactor = Reactor.instance
         reactor.debug = true
         reactor.registerStore("feed", store: FeedDataStore())
+        reactor.registerStore("ui", store: UIDataStore())
         reactor.reset()
         return true
     }
