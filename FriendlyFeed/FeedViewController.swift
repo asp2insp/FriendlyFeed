@@ -9,14 +9,15 @@
 import Foundation
 let manager = AFHTTPRequestOperationManager()
 
-class FeedViewController : UIViewController, ReactorResponder, UICollectionViewDataSource {
+class FeedViewController : UIViewController, ReactorResponder, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    private let sectionInsets = UIEdgeInsets(top: 10.0, left: 10.0, bottom: 20.0, right: 10.0)
     let reactor = Reactor.instance
 
     @IBOutlet weak var collectionView: UICollectionView!
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        collectionView.registerClass(StatusCell.self, forCellWithReuseIdentifier: "friendlyfeed.status")
-        collectionView.registerClass(PhotoCell.self, forCellWithReuseIdentifier: "friendlyfeed.photo")
+        collectionView.registerNib(UINib(nibName:"StatusCell", bundle: nil), forCellWithReuseIdentifier: "friendlyfeed.status")
+        collectionView.registerNib(UINib(nibName: "PhotoCell", bundle: nil), forCellWithReuseIdentifier: "friendlyfeed.photo")
         
         reactor.responder = self
         self.refreshDataFromServer()
@@ -27,6 +28,17 @@ class FeedViewController : UIViewController, ReactorResponder, UICollectionViewD
             FBSDKGraphRequest(graphPath: "me/feed", parameters: nil).startWithCompletionHandler({ (connection, result, error) -> Void in
                 if error == nil {
                     self.reactor.dispatch("setData", payload: result)
+                } else {
+                    self.reactor.dispatch("setData", payload: [
+                        "data": [
+                            ["message": "Dummy item 1"],
+                            ["message": "Dummy item 2"],
+                            ["message": "Dummy item 3"],
+                            ["picture": "http://www.example.com/image.png"],
+                            ["message": "Dummy item 4"],
+                            ["message": "Dummy item 5"]
+                        ]
+                    ])
                 }
             })
         }
@@ -37,17 +49,31 @@ class FeedViewController : UIViewController, ReactorResponder, UICollectionViewD
         return reactor.evaluate(FEED).count
     }
     
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        if let message = reactor.evaluate(FEED)
+                .getIn([indexPath.row])
+                .getIn(["message"])
+                .toSwift() as? String {
+            return CGSize(width: 260, height: 100)
+        } else {
+            return CGSize(width: 150, height: 200)
+        }
+    }
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
+        return sectionInsets
+    }
+    
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let post = reactor.evaluate(FEED).getIn([indexPath.row])
         if let message = post.getIn(["message"]).toSwift() as? String {
             let cell = collectionView.dequeueReusableCellWithReuseIdentifier("friendlyfeed.status", forIndexPath: indexPath) as! StatusCell
             cell.message.text = message
-            cell.message.textColor = UIColor.whiteColor()
-            cell.backgroundColor = UIColor.redColor()
             return cell
         } else if let message = post.getIn(["picture"]).toSwift() as? String {
             let cell = collectionView.dequeueReusableCellWithReuseIdentifier("friendlyfeed.photo", forIndexPath: indexPath) as! PhotoCell
-            cell.backgroundColor = UIColor.blueColor()
+            let url = NSURL(string: message)
+            cell.picture.setImageWithURL(url)
             return cell
         } else {
             let cell = collectionView.dequeueReusableCellWithReuseIdentifier("friendlyfeed.status", forIndexPath: indexPath) as! StatusCell
@@ -58,38 +84,5 @@ class FeedViewController : UIViewController, ReactorResponder, UICollectionViewD
     
     func onUpdate() {
         collectionView.reloadData()
-    }
-}
-
-// friendlyfeed.status
-class StatusCell : UICollectionViewCell {
-    var message: UILabel!
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        self.message = UILabel()
-        message.center = contentView.center
-        contentView.addSubview(message)
-    }
-    
-    required init(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        
-    }
-}
-
-// friendlyfeed.photo
-class PhotoCell : UICollectionViewCell {
-    var picture: UIImageView!
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        self.picture = UIImageView()
-        picture.center = contentView.center
-        contentView.addSubview(picture)
-    }
-    
-    required init(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
     }
 }

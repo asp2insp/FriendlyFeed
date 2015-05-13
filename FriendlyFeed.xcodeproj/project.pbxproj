@@ -21,6 +21,10 @@
 		FEEE5CBF1B019C59009C1280 /* Reactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEE5CBA1B019C59009C1280 /* Reactor.swift */; };
 		FEEE5CC01B019C59009C1280 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEE5CBB1B019C59009C1280 /* Store.swift */; };
 		FEEE5CC31B019CDE009C1280 /* Stores.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEE5CC21B019CDE009C1280 /* Stores.swift */; };
+		FEEE5CCE1B02E308009C1280 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEE5CCC1B02E308009C1280 /* PhotoCell.swift */; };
+		FEEE5CCF1B02E308009C1280 /* PhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEEE5CCD1B02E308009C1280 /* PhotoCell.xib */; };
+		FEEE5CD21B02E443009C1280 /* StatusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEE5CD01B02E443009C1280 /* StatusCell.swift */; };
+		FEEE5CD31B02E443009C1280 /* StatusCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEEE5CD11B02E443009C1280 /* StatusCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +59,10 @@
 		FEEE5CBA1B019C59009C1280 /* Reactor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reactor.swift; sourceTree = "<group>"; };
 		FEEE5CBB1B019C59009C1280 /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		FEEE5CC21B019CDE009C1280 /* Stores.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stores.swift; sourceTree = "<group>"; };
+		FEEE5CCC1B02E308009C1280 /* PhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		FEEE5CCD1B02E308009C1280 /* PhotoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoCell.xib; sourceTree = "<group>"; };
+		FEEE5CD01B02E443009C1280 /* StatusCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusCell.swift; sourceTree = "<group>"; };
+		FEEE5CD11B02E443009C1280 /* StatusCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StatusCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +134,10 @@
 				FEEE5CAE1B0194CE009C1280 /* FriendlyFeed-Bridging-Header.h */,
 				FEEE5CB51B019BDB009C1280 /* FeedViewController.swift */,
 				FEEE5CC21B019CDE009C1280 /* Stores.swift */,
+				FEEE5CCC1B02E308009C1280 /* PhotoCell.swift */,
+				FEEE5CCD1B02E308009C1280 /* PhotoCell.xib */,
+				FEEE5CD01B02E443009C1280 /* StatusCell.swift */,
+				FEEE5CD11B02E443009C1280 /* StatusCell.xib */,
 			);
 			path = FriendlyFeed;
 			sourceTree = "<group>";
@@ -249,6 +261,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEEE5CCF1B02E308009C1280 /* PhotoCell.xib in Resources */,
+				FEEE5CD31B02E443009C1280 /* StatusCell.xib in Resources */,
 				FEEE5C941B01933F009C1280 /* Main.storyboard in Resources */,
 				FEEE5C991B01933F009C1280 /* LaunchScreen.xib in Resources */,
 				FEEE5C961B01933F009C1280 /* Images.xcassets in Resources */,
@@ -306,8 +320,10 @@
 				FEEE5CBC1B019C59009C1280 /* Evaluator.swift in Sources */,
 				FEEE5CBF1B019C59009C1280 /* Reactor.swift in Sources */,
 				FEEE5CC01B019C59009C1280 /* Store.swift in Sources */,
+				FEEE5CD21B02E443009C1280 /* StatusCell.swift in Sources */,
 				FEEE5CB61B019BDB009C1280 /* FeedViewController.swift in Sources */,
 				FEEE5CC31B019CDE009C1280 /* Stores.swift in Sources */,
+				FEEE5CCE1B02E308009C1280 /* PhotoCell.swift in Sources */,
 				FEEE5C8F1B01933F009C1280 /* AppDelegate.swift in Sources */,
 				FEEE5CBE1B019C59009C1280 /* Immutable.swift in Sources */,
 				FEEE5CBD1B019C59009C1280 /* Getter.swift in Sources */,

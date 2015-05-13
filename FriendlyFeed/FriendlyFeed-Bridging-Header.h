@@ -5,3 +5,4 @@
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 #import <AFNetworking/AFNetworking.h>
+#import "UIImageView+AFNetworking.h"

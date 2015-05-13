@@ -5,7 +5,7 @@ This is a lab assignment for the CodePath iOS bootcamp
 
 ## Milestones:
  [x] Setup
- [ ] User Home Feed
+ [x] User Home Feed
  [ ] Feed Settings View
 
 ## Bonus:

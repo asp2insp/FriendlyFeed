@@ -49,6 +49,7 @@
                                 <cells/>
                                 <connections>
                                     <outlet property="dataSource" destination="GEP-ra-CpG" id="ET2-Ds-Tj1"/>
+                                    <outlet property="delegate" destination="GEP-ra-CpG" id="sBi-zL-ETT"/>
                                 </connections>
                             </collectionView>
                         </subviews>
