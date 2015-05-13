@@ -12,3 +12,6 @@ This is a lab assignment for the CodePath iOS bootcamp
  [ ] Profile Images
  [ ] Picker view on settings page
  [ ] Full Scren Photo Browser
+
+
+!(video walkthrough)[walkthrough.gif]
